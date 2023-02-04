@@ -10,17 +10,20 @@ body {
 }
 .header-container {
   position: fixed;
+  height: 100vh;
   top: 0;
   left: 0;
   width: 40%;
   background-color: #f0f0f0;
-  padding: 74px 0px 0px 72px;
-  overflow-y: scroll;
+  padding: 74px 100px 0px 72px;
+  overflow-y: auto;
+  z-index: 1;
   .title {
-    font-size: 80px;
+    font-size: 90px;
     font-weight: 500;
     color: #e7473c;
     margin-bottom: 72px;
+    letter-spacing: 0.2rem;
   }
   .sub {
     font-size: 26px;
@@ -65,5 +68,262 @@ body {
 
   .nav-description {
     margin: 24px 0px 72px 0px;
+  }
+}
+
+.main-container {
+  width: 100%;
+  padding-left: 40%;
+  font-size: 24px;
+  background-color: #e7473c;
+  color: white;
+
+  .main-title {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    padding: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #e7473c;
+    .title-funtion {
+      color: black;
+      opacity: 0.6;
+      border-bottom: 1px solid black;
+      margin: 0px 5px;
+      &:hover {
+        cursor: pointer;
+        color: white;
+        opacity: 1;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+
+  .content-container {
+    padding: 54px 48px;
+    .content-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      position: relative;
+      padding-bottom: 24px;
+      .content-title {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      .title-directer {
+        font-size: 16px;
+      }
+      .title__icon {
+        position: absolute;
+        left: -45px;
+        opacity: 0;
+        color: black;
+        transition: opacity 1s;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .content-img-container {
+    width: 100%;
+    height: 400px;
+
+    .content-img {
+      position: relative;
+      img {
+        width: 100%;
+        height: 400px;
+      }
+
+      .content-category {
+        background-color: #d0251a;
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: -10px;
+        padding: 10px;
+        .hashtag {
+          font-size: 16px;
+        }
+        .hashtag-number {
+          font-size: 20px;
+        }
+      }
+      .content-funtion {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        text-align: center;
+
+        .vote-up {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .vote-up-icon {
+            background-color: #d0251a;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          &:hover::before {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+          &::before {
+            content: "Vote up";
+            position: absolute;
+            white-space: nowrap;
+            top: 0;
+            right: 100%;
+            line-height: 40px;
+            padding: 0px 10px;
+            height: 40px;
+            background-color: #d0251a;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in;
+          }
+        }
+        .number {
+          background-color: #d0251a;
+        }
+        .vote-down {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .vote-up-down {
+            background-color: #d0251a;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          &:hover::before {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+          &::before {
+            content: "Vote down";
+            position: absolute;
+            white-space: nowrap;
+            top: 0;
+            right: 100%;
+            line-height: 40px;
+            padding: 0px 10px;
+            height: 40px;
+            background-color: #d0251a;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in;
+          }
+        }
+      }
+    }
+  }
+  .content-description {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 48px 0px 24px;
+  }
+  .content-state,
+  .content-comment {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  .content-state {
+    padding-bottom: 15px;
+    .rating {
+      color: black;
+      opacity: 0.7;
+    }
+  }
+
+  .content-comment {
+    color: black;
+    opacity: 0.7;
+    .leave-comment {
+      display: flex;
+      align-items: center;
+      i {
+        padding: 0px 5px 10px;
+      }
+      .leave-comment-box {
+        padding-bottom: 10px;
+        border-bottom: 2px solid black;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    height: 250px;
+    .youtube-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: white;
+      &:hover {
+        cursor: pointer;
+      }
+      .youtube-box {
+        height: 30px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #d0251a;
+      }
+      .youtube {
+        margin-left: 5px;
+      }
+      .youtube-heart {
+        height: 30px;
+        width: 50px;
+        line-height: 30px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        opacity: 0.5;
+      }
+    }
+    .follow-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1d9bf0;
+      height: 30px;
+      width: 250px;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 8px;
+      border-radius: 20px;
+      &:hover {
+        cursor: pointer;
+      }
+      i {
+        padding-right: 5px;
+      }
+    }
   }
 }
