@@ -1,0 +1,59 @@
+c*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.header-contaniner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 155px;
+  padding: 0 140px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  .header-storage:first-child {
+    padding-right: 40px;
+  }
+
+  .header-storages {
+    display: flex;
+    width: 250px;
+    .header-storage {
+      &:hover {
+        opacity: 0.3;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .header-logo img {
+    width: 80px;
+    height: 80px;
+  }
+  .header-links {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+    .header-link {
+      padding-right: 30px;
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+    .header-img-link {
+      display: flex;
+
+      .sub-img {
+        display: flex;
+        align-items: center;
+        line-height: 50px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
