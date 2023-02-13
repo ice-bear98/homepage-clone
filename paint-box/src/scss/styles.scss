@@ -203,6 +203,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      .shop-title {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      .shop-subtitle {
+        font-size: 30px;
+      }
     }
     .newest-lists {
       display: grid;
