@@ -1,0 +1,64 @@
+@import "_variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: #af7832;
+  background-color: #af7832;
+}
+
+.header,
+.footer {
+  background-color: white;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  line-height: 10vh;
+  text-align: center;
+  .menu:hover {
+    cursor: pointer;
+    background-color: #af7832;
+    color: white;
+    transition: 0.2s ease-in-out;
+  }
+  & > * {
+    @extend %border;
+  }
+}
+
+.article {
+  background-color: white;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  .number {
+    display: grid;
+    grid-template-rows: repeat(1fr, 5);
+
+    .number-list {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %border;
+      &:hover {
+        cursor: pointer;
+        background-color: #af7832;
+        color: white;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+  .img {
+    height: 80vh;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
