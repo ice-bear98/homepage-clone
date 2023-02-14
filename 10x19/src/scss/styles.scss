@@ -62,3 +62,21 @@ body {
     }
   }
 }
+
+.ani-container {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 25px;
+  .text {
+    animation: textlinear 10s linear infinite;
+  }
+}
+
+@keyframes textlinear {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
