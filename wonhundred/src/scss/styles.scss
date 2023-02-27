@@ -1,0 +1,247 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  font-size: 14px;
+  z-index: 1;
+  .page-title {
+    padding: 0px 40px 0px 50px;
+    font-weight: 700;
+    font-size: 22px;
+    width: 250px;
+  }
+  .header-lists {
+    display: flex;
+
+    .header-list {
+      padding-right: 30px;
+      &:hover {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      &:last-child {
+        padding-right: 500px;
+      }
+    }
+  }
+  .header-side {
+    display: flex;
+    .side {
+      padding-right: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main {
+  .main-content {
+    position: relative;
+    padding-top: 30px;
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 100px;
+    background-color: #cfc6be;
+    margin-bottom: 50px;
+    &:hover {
+      cursor: pointer;
+      .comtent-img {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+    .comtent-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+  }
+
+  .category-container {
+    margin-bottom: 50px;
+    font-size: 18px;
+    h2 {
+      padding: 20px 0px;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      .category {
+        text-align: center;
+        img {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 10px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 100px;
+    .product {
+      height: 100vh;
+      &:first-child {
+        background-image: url("../../img/women1.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &:last-child {
+        background-image: url("../../img/men1.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .boots-container {
+    margin-bottom: 50px;
+    .boots-info {
+      padding-left: 10px;
+      max-width: 70vw;
+      .boots-title {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .boots-lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.jean-produck {
+  font-size: 20px;
+  .jean-lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 100px;
+
+    .jean-list {
+      margin: 15px 0px 50px;
+      height: 100vh;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.page-description {
+  padding-left: 50px;
+  margin-bottom: 70px;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 70vw;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+}
+
+.footer-contanier {
+  padding: 100px 100px 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  .personal-information {
+    .sale {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .email-box {
+      margin-top: 10px;
+      .email {
+        width: 100%;
+        height: 35px;
+      }
+      .gender {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+        height: 35px;
+        font-weight: 600;
+        font-size: 14px;
+        background-color: black;
+        color: white;
+        .menu {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .sns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    span {
+      padding-top: 30px;
+    }
+    h2 {
+      font-weight: 600;
+    }
+  }
+  .lists {
+    display: flex;
+    .footer-lists {
+      margin-right: 30px;
+      font-size: 14px;
+      .footer-list {
+        margin-top: 3px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
