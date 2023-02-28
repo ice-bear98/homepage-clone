@@ -1,0 +1,12 @@
+.tail {
+  display: flex;
+  font-size: 14px;
+  .link {
+    margin-left: 5px;
+    color: #f98939;
+    border-bottom: 1px solid #f98939;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

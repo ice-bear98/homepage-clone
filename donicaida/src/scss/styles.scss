@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+#body {
+  padding: 0px 40px;
+  font-family: "Inter", sans-serif;
+}
+.title {
+  font-size: 50px;
+  line-height: 70px;
+  padding: 40px 0px 100px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 18px;
+  &:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+  &:first-child {
+    font-size: 12px;
+    font-weight: 200;
+  }
+  &:hover:not(:first-child) {
+    font-family: "Dancing Script", cursive;
+    cursor: pointer;
+  }
+  .year {
+    width: 200px;
+  }
+  .client {
+    width: 800px;
+  }
+  .project {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.info {
+  margin-top: 60px;
+  font-size: 30px;
+  span {
+    font-size: 16px;
+  }
+  a {
+    border-bottom: 3px solid black;
+    &:hover {
+      font-family: "Dancing Script", cursive;
+    }
+  }
+}
+
+.footer {
+  font-size: 14px;
+  padding: 50px 0px;
+}

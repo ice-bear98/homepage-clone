@@ -1,0 +1,132 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.header-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  height: 7vh;
+  line-height: 7vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  font-size: 35px;
+  font-weight: 600;
+
+  .header-nav {
+    display: flex;
+    &:hover {
+      background-color: #e0e1e2;
+      .nav {
+        opacity: 1;
+        color: white;
+      }
+    }
+    &:active {
+      .header-content {
+        display: block;
+      }
+    }
+    .nav-container {
+      display: flex;
+    }
+    .page {
+      padding: 0px 12px;
+      margin-right: 70px;
+    }
+    .nav {
+      margin-right: 48px;
+      opacity: 0.3;
+    }
+
+    .header-content {
+      display: none;
+      background-color: #e0e1e2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% / 3 * 2);
+      overflow-y: scroll;
+      .content-box {
+        display: flex;
+        padding-bottom: 16px;
+        border-bottom: 1px solid black;
+        .content-title {
+          width: 15%;
+          padding: 0px 12px;
+        }
+        .content-p {
+          display: block;
+          width: 40%;
+          padding: 12px 12px 0px;
+          font-size: 16px;
+          line-height: 2vh;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  .header-side {
+    &:hover {
+      background-color: #e0e1e2;
+    }
+    &:active {
+      .side-right {
+        .list-container {
+          display: block;
+        }
+      }
+    }
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .side-left {
+      display: grid;
+      grid-template-rows: 7vh 1fr;
+    }
+    .side-right {
+      display: grid;
+      grid-template-rows: 7vh 1fr;
+      .category-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .language {
+          font-size: 18px;
+          padding-right: 12px;
+          line-height: 10vh;
+        }
+      }
+      .list-container {
+        display: none;
+        height: 93vh;
+      }
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  padding-top: 7vh;
+  article {
+    height: 55vh;
+    img {
+      height: 90%;
+      width: 100%;
+    }
+    .category-title {
+      font-size: 20px;
+      height: 10%;
+      line-height: 5vh;
+      padding: 0px 12px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
